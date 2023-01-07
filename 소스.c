@@ -1,3 +1,4 @@
+/*
 #pragma warning(disable : 4996)
 #include <stdio.h>
 
@@ -16,5 +17,24 @@ int main(void)
 		scanf("%d", &num);
 		printf("´©Àû: %d \n", AddToTotal(num));
 	}
+	return 0;
+}
+*/
+
+
+#pragma warning(disable : 4996)
+#include <stdio.h>
+
+void recursive(int num)
+{
+	if (num <= 0)
+		return;
+	printf("recursive call! %d \n", num);
+	recursive(num - 1);
+}
+
+int main(void)
+{
+	recursive(3);
 	return 0;
 }
